@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red193\green193\blue193;\red24\green24\blue24;\red70\green137\blue204;
+\red212\green214\blue154;\red140\green211\blue254;\red194\green126\blue101;\red89\green138\blue67;\red202\green202\blue202;
+\red66\green179\blue255;\red167\green197\blue152;\red67\green192\blue160;\red183\green111\blue179;}
+{\*\expandedcolortbl;;\cssrgb\c80000\c80000\c80000;\cssrgb\c12157\c12157\c12157;\cssrgb\c33725\c61176\c83922;
+\cssrgb\c86275\c86275\c66667;\cssrgb\c61176\c86275\c99608;\cssrgb\c80784\c56863\c47059;\cssrgb\c41569\c60000\c33333;\cssrgb\c83137\c83137\c83137;
+\cssrgb\c30980\c75686\c100000;\cssrgb\c70980\c80784\c65882;\cssrgb\c30588\c78824\c69020;\cssrgb\c77255\c52549\c75294;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3       \cf4 \strokec4 function\cf2 \strokec2  \cf5 \strokec5 handleClientLoad\cf2 \strokec2 () \{\cb1 \
+\cb3         \cf6 \strokec6 gapi\cf2 \strokec2 .\cf5 \strokec5 load\cf2 \strokec2 (\cf7 \strokec7 'client:auth2'\cf2 \strokec2 , \cf5 \strokec5 initClient\cf2 \strokec2 );\cb1 \
+\cb3       \}\cb1 \
+\cb3     \cb1 \
+\cb3       \cf4 \strokec4 function\cf2 \strokec2  \cf5 \strokec5 initClient\cf2 \strokec2 () \{\cb1 \
+\cb3         \cf6 \strokec6 gapi\cf2 \strokec2 .\cf6 \strokec6 client\cf2 \strokec2 .\cf5 \strokec5 init\cf2 \strokec2 (\{\cb1 \
+\cb3           \cf6 \strokec6 apiKey:\cf2 \strokec2  \cf7 \strokec7 'AIzaSyCAxtaAvJO6n3lJxYJF9pYR0WzH-Kvgz68'\cf2 \strokec2 ,\cb1 \
+\cb3           \cf6 \strokec6 discoveryDocs:\cf2 \strokec2  [\cf7 \strokec7 'https://sheets.googleapis.com/$discovery/rest?version=v4'\cf2 \strokec2 ],\cb1 \
+\cb3           \cf6 \strokec6 clientId:\cf2 \strokec2  \cf7 \strokec7 '936823829324-1jlgtp7bk0mbnic7u7ai03rulpj8j0e5.apps.googleusercontent.com'\cf2 \strokec2 ,\cb1 \
+\cb3           \cf6 \strokec6 scope:\cf2 \strokec2  \cf7 \strokec7 'https://www.googleapis.com/auth/spreadsheets'\cf2 \cb1 \strokec2 \
+\cb3         \}).\cf5 \strokec5 then\cf2 \strokec2 (\cf4 \strokec4 function\cf2 \strokec2 () \{\cb1 \
+\cb3         \}, \cf4 \strokec4 function\cf2 \strokec2 (\cf6 \strokec6 error\cf2 \strokec2 ) \{\cb1 \
+\cb3           \cf6 \strokec6 console\cf2 \strokec2 .\cf5 \strokec5 log\cf2 \strokec2 (\cf7 \strokec7 'Error initializing Google Sheets API:'\cf2 \strokec2 , \cf6 \strokec6 error\cf2 \strokec2 );\cb1 \
+\cb3         \});\cb1 \
+\cb3       \}      \cb1 \
+\
+\cb3       \cf4 \strokec4 function\cf2 \strokec2  \cf5 \strokec5 handleCredentialResponse\cf2 \strokec2 (\cf6 \strokec6 response\cf2 \strokec2 ) \{\cb1 \
+\cb3         \cf8 \strokec8 // Verify the response on the server using an API call\cf2 \cb1 \strokec2 \
+\cb3         \cf5 \strokec5 fetch\cf2 \strokec2 (\cf7 \strokec7 '/verify-token.php'\cf2 \strokec2 , \{\cb1 \
+\cb3             \cf6 \strokec6 method:\cf2 \strokec2  \cf7 \strokec7 'POST'\cf2 \strokec2 ,\cb1 \
+\cb3             \cf6 \strokec6 headers:\cf2 \strokec2  \{\cb1 \
+\cb3                 \cf7 \strokec7 'Content-Type'\cf6 \strokec6 :\cf2 \strokec2  \cf7 \strokec7 'application/json'\cf2 \cb1 \strokec2 \
+\cb3             \},\cb1 \
+\cb3             \cf6 \strokec6 body:\cf2 \strokec2  \cf6 \strokec6 JSON\cf2 \strokec2 .\cf5 \strokec5 stringify\cf2 \strokec2 (\cf6 \strokec6 response\cf2 \strokec2 .\cf6 \strokec6 credential\cf2 \strokec2 )\cb1 \
+\cb3         \})\cb1 \
+\cb3         .\cf5 \strokec5 then\cf2 \strokec2 (\cf6 \strokec6 response\cf2 \strokec2  \cf4 \strokec4 =>\cf2 \strokec2  \cf6 \strokec6 response\cf2 \strokec2 .\cf5 \strokec5 json\cf2 \strokec2 ())\cb1 \
+\cb3         .\cf5 \strokec5 then\cf2 \strokec2 (\cf6 \strokec6 data\cf2 \strokec2  \cf4 \strokec4 =>\cf2 \strokec2  \{\cb1 \
+\cb3             \cf8 \strokec8 // Display the user information on successful verification\cf2 \cb1 \strokec2 \
+\cb3             \cf6 \strokec6 document\cf2 \strokec2 .\cf5 \strokec5 getElementById\cf2 \strokec2 (\cf7 \strokec7 'user-name'\cf2 \strokec2 ).\cf6 \strokec6 textContent\cf2 \strokec2  \cf9 \strokec9 =\cf2 \strokec2  \cf6 \strokec6 data\cf2 \strokec2 .\cf6 \strokec6 name\cf2 \strokec2 ;\cb1 \
+\cb3             \cf6 \strokec6 document\cf2 \strokec2 .\cf5 \strokec5 getElementById\cf2 \strokec2 (\cf7 \strokec7 'user-email'\cf2 \strokec2 ).\cf6 \strokec6 textContent\cf2 \strokec2  \cf9 \strokec9 =\cf2 \strokec2  \cf6 \strokec6 data\cf2 \strokec2 .\cf6 \strokec6 email\cf2 \strokec2 ;\cb1 \
+\cb3             \cf6 \strokec6 document\cf2 \strokec2 .\cf5 \strokec5 getElementById\cf2 \strokec2 (\cf7 \strokec7 'user-profile'\cf2 \strokec2 ).\cf10 \strokec10 style\cf2 \strokec2 .\cf6 \strokec6 display\cf2 \strokec2  \cf9 \strokec9 =\cf2 \strokec2  \cf7 \strokec7 'block'\cf2 \strokec2 ;\cb1 \
+\cb3         \})\cb1 \
+\cb3         .\cf5 \strokec5 catch\cf2 \strokec2 (\cf6 \strokec6 error\cf2 \strokec2  \cf4 \strokec4 =>\cf2 \strokec2  \{\cb1 \
+\cb3             \cf6 \strokec6 console\cf2 \strokec2 .\cf5 \strokec5 error\cf2 \strokec2 (\cf7 \strokec7 'Error:'\cf2 \strokec2 , \cf6 \strokec6 error\cf2 \strokec2 );\cb1 \
+\cb3         \});\cb1 \
+\cb3     \}\cb1 \
+\
+<div id="g_id_onload"\
+     data-client_id="335082268909-id015ft6s2r262lp4psv0emevsabkdog.apps.googleusercontent.com"\
+     data-context="signin"\
+     data-ux_mode="popup"\
+     data-callback="handleOneTapSignIn"\
+     data-auto_select="true"\
+     data-itp_support="true">\
+</div>\
+\
+<div class="g_id_signin"\
+     data-type="standard"\
+     data-shape="pill"\
+     data-theme="outline"\
+     data-text="signin"\
+     data-size="large"\
+     data-logo_alignment="left">\
+</div>\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3 \strokec4 const\cf2 \strokec2  \cf10 \strokec10 idToken\cf2 \strokec2  \cf9 \strokec9 =\cf2 \strokec2  \cf7 \strokec7 'your-id-token'\cf2 \strokec2 ;\cb1 \
+\cf4 \cb3 \strokec4 const\cf2 \strokec2  \cf10 \strokec10 userData\cf2 \strokec2  \cf9 \strokec9 =\cf2 \strokec2  \{ \cf6 \strokec6 name:\cf2 \strokec2  \cf7 \strokec7 'John Doe'\cf2 \strokec2 , \cf6 \strokec6 age:\cf2 \strokec2  \cf11 \cb3 \strokec11 25\cf2 \cb3 \strokec2  \};\cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8 // Send data to the server using AJAX\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb3 \strokec4 const\cf2 \strokec2  \cf10 \strokec10 xhr\cf2 \strokec2  \cf9 \strokec9 =\cf2 \strokec2  \cf4 \strokec4 new\cf2 \strokec2  \cf12 \cb3 \strokec12 XMLHttpRequest\cf2 \cb3 \strokec2 ();\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb3 \strokec10 xhr\cf2 \strokec2 .\cf5 \strokec5 open\cf2 \strokec2 (\cf7 \strokec7 'POST'\cf2 \strokec2 , \cf7 \strokec7 '/process-data'\cf2 \strokec2 , \cf4 \strokec4 true\cf2 \strokec2 );\cb1 \
+\cf10 \cb3 \strokec10 xhr\cf2 \strokec2 .\cf5 \strokec5 setRequestHeader\cf2 \strokec2 (\cf7 \strokec7 'Content-Type'\cf2 \strokec2 , \cf7 \strokec7 'application/json'\cf2 \strokec2 );\cb1 \
+\cf10 \cb3 \strokec10 xhr\cf2 \strokec2 .\cf5 \strokec5 onreadystatechange\cf2 \strokec2  \cf9 \strokec9 =\cf2 \strokec2  \cf4 \strokec4 function\cf2 \strokec2  () \{\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3   \cf13 \cb3 \strokec13 if\cf2 \cb3 \strokec2  (\cf10 \strokec10 xhr\cf2 \strokec2 .\cf10 \strokec10 readyState\cf2 \strokec2  \cf9 \strokec9 ===\cf2 \strokec2  \cf12 \cb3 \strokec12 XMLHttpRequest\cf2 \cb3 \strokec2 .\cf10 \strokec10 DONE\cf2 \strokec2 ) \{\cb1 \
+\cb3     \cf13 \cb3 \strokec13 if\cf2 \cb3 \strokec2  (\cf10 \strokec10 xhr\cf2 \strokec2 .\cf10 \strokec10 status\cf2 \strokec2  \cf9 \strokec9 ===\cf2 \strokec2  \cf11 \cb3 \strokec11 200\cf2 \cb3 \strokec2 ) \{\cb1 \
+\cb3       \cf6 \strokec6 console\cf2 \strokec2 .\cf5 \strokec5 log\cf2 \strokec2 (\cf7 \strokec7 'Data sent successfully.'\cf2 \strokec2 );\cb1 \
+\cb3     \} \cf13 \cb3 \strokec13 else\cf2 \cb3 \strokec2  \{\cb1 \
+\cb3       \cf6 \strokec6 console\cf2 \strokec2 .\cf5 \strokec5 error\cf2 \strokec2 (\cf7 \strokec7 'Error sending data:'\cf2 \strokec2 , \cf10 \strokec10 xhr\cf2 \strokec2 .\cf10 \strokec10 status\cf2 \strokec2 );\cb1 \
+\cb3     \}\cb1 \
+\cb3   \}\cb1 \
+\cb3 \};\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \cb3 \strokec10 xhr\cf2 \strokec2 .\cf5 \strokec5 send\cf2 \strokec2 (\cf6 \strokec6 JSON\cf2 \strokec2 .\cf5 \strokec5 stringify\cf2 \strokec2 (\{ \cf6 \strokec6 idToken\cf2 \strokec2 , \cf6 \strokec6 userData\cf2 \strokec2  \}));\cb1 \
+\
+}

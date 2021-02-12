@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Guitar Hub</title>
+  <meta name="robots" content="noarchive" />
+  <meta name="Baiduspider" content="noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  <style>
+    
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    body {
+
+
+
+
+
+      width: 100%;
+      height: 500vh;
+      display: flex;
+      flex-direction: column;
+      align-content: left;
+      justify-content: top;
+      background-size: 300% 300%;
+      background-image: linear-gradient(-45deg,
+          /*rgba(59, 173, 227, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(152, 68, 183, 1) 51%,
+          rgba(255, 53, 127, 1) 100%);*/
+          rgba(50, 999, 50, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(50, 68, 183, 1) 51%,
+          rgba(255, 255, 255, 1) 100%);
+      animation: AnimateBG 20s ease infinite;
+      text-align: left;
+      font-family: sans-serif, Microsoft YaHei, Cambria, Verdana, "Georgia", Arial;
+    }
+
+    @keyframes AnimateBG {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #fff;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    p {
+      color: #fcfcfc;
+      font-size: 18px;
+      text-shadow: 1px 1px 2px #212121;
+    }
+    
+    a {
+  background-color: #000000;
+  padding: 20px;
+  display: inline-block;
+  width: 400px;
+  height: 500px;
+  color: Black;
+  border: solid 2px;
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+  top: calc(50% - 0px - 200px);
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slide 5s infinite;
+}
+
+
+@keyframes slide {
+  0% {
+    border: solid 2px white;
+  }
+  50% {
+    border: solid 2px black;
+  }
+  100% {
+    border: solid 2px white;
+  }
+}
+a{ background-color: #C1A4A4;
+       padding:20px;
+       display: inline-block;
+       width: 500px;
+       color:Black;
+       border:solid 2px;
+       margin: 0 auto;
+        z-index: 1;
+       }
+        b{ background-color:grey;
+       padding:20px;
+       display: inline-block;
+       width: 150px;
+       color:Black;
+       border:solid 2px;
+     
+       }
+       #shadowBox {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
+    border: 3px solid;
+}
+
+       .rainbow {
+    text-align: left;
+    font-size: 32px;
+    font-family: monospace;
+    letter-spacing: 5px;
+    z-index: 2;
+}
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+        a2 {
+  background-color: #000000;
+  padding: 0px;
+  display: inline-block;
+  width: 9000px;
+  color: Black;
+  border: solid 2px;
+  margin: 0 auto;
+  position: fixed;
+   z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slide 5s infinite;
+}
+          img {
+ z-index: 3
+ margin-right: 50;
+}
+</style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+  <center>
+  <a2> 
+
+<center>
+ <img  src="/Users/dave/Documents/!Sterling/!HTML/!SC/Web/Media/SC-HEADER.png" height= "142.4" width="1615" >
+
+
+</center>
+
+  </a2>
+  
+<a>
+
+
+<center>
+<h1 style="background: linear-gradient(#379343, #1f41e0); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Pick Your Pick!</h1>
+<br><br>
+<c>
+<img  src="/Users/dave/Documents/!Sterling/!HTML/!SC/Web/Media/Pick.png" height= "300" width="300" >
+   
+      
+      <br>
+      
+      
+  
+      <br>
+
+
+<button class="glow-on-hover" onmouseover="document.getElementById('price').innerHTML = '$5 <br> <p>3 Picks</p>'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onclick="window.location.href = '/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/Index.html'">Small Pack</button>
+
+
+<button class="glow-on-hover" onmouseover="document.getElementById('price').innerHTML = '$7 <br> <p>5 Picks</p>'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onclick="window.location.href = '/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/Index.html'">Medium Pack</button>
+
+
+<button class="glow-on-hover" onmouseover="document.getElementById('price').innerHTML = '$10 <br> <p>7 Picks</p>'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onclick="window.location.href = '/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/Index.html'">Large Pack</button>
+
+
+
+
+<style> #price {
+  font-family: Comfortaa, sans-serif;
+  font-size: 50pt;
+    position: absolute;
+  top: 0;
+  right: .5;
+}
+  </style>
+
+ <p id="price" class="rainbow rainbow_text_animated"></p>
+           <p id="price2" class="rainbow rainbow_text_animated"></p>
+                <p id="price3" class="rainbow rainbow_text_animated"></p>
+      
+
+<br><br><br>
+
+
+</center>
+</a>
+
+
+</center>
+ <div>
+  <div style="position:fixed; left:0px; background-size: 300% 300%; height:1200px; width:75px; background-color:#c0c0c0; border:2px solid black;
+  background-repeat:repeat; background-position:center; background-attachment:fixed; transition: width 1s;text-align:center; padding-top:20px; top: -150px;"
+       onmouseover="this.style.width='225px';" onmouseout="this.style.width='75px';">
+       
+ <br> <br> <br> <br>  <br> <br> <br>  <br> <br> <br> <br> <br> <br> <br> <br><br> <br> 
+ 
+ 
+ 
+ 
+ 
+ <div style="overflow-x: hidden;"> </div>
+  <p class=" rainbow_text_animated"style=" margin-right: 16px;">Other<br> Products      </p>
+  <br><br> <br> <br> <br> 
+  <button
+  style="position: absolute; right: 75px; top: 575px"
+  class="glow-on-hover"type="button" 
+  onclick="window.location.href='/Users/dave/Documents/!Sterling/!HTML/!SC/Web/Index.html'"
+  >Home</button>
+
+<button class="glow-on-hover" type="button" style="position: absolute; right: 75px; top: 650px;"
+  onclick="window.location.href='/Users/dave/Documents/!Sterling/!HTML/!SC/Web/Html/Blazers.html'"
+  >Boot Blazers</button>
+
+<button class="glow-on-hover" type="button" style="position: absolute; right: 75px; top: 725px;"
+  onclick="window.location.href='/Users/dave/Documents/!Sterling/!HTML/!SC/Web/Html/GuitarHub.html'"
+  >Guitar Hub</button>
+
+<button class="glow-on-hover" type="button" style="position: absolute; right: 75px; top: 800px;"
+  onclick="window.location.href='/Users/dave/Documents/!Sterling/!HTML/!SC/Web/Html/Blazers.html'"
+  >Toasty Toes</button>
+
+<button class="glow-on-hover" type="button" style="position: absolute; right: 75px; top: 875px;"
+  onclick="window.location.href='/Users/dave/Documents/!Sterling/!HTML/!SC/Web/Html/Feedback.html'"
+  >Contact Us</button>
+</div>
+
+</body>
+
+</html>

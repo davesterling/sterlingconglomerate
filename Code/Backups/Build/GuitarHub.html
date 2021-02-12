@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Guitar Hub</title>
+  <meta name="robots" content="noarchive" />
+  <meta name="Baiduspider" content="noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  <style>
+    
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    body {
+
+
+
+
+
+      width: 100%;
+      height: 500vh;
+      display: flex;
+      flex-direction: column;
+      align-content: left;
+      justify-content: top;
+      background-size: 300% 300%;
+      background-image: linear-gradient(-45deg,
+          /*rgba(59, 173, 227, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(152, 68, 183, 1) 51%,
+          rgba(255, 53, 127, 1) 100%);*/
+          rgba(50, 999, 50, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(50, 68, 183, 1) 51%,
+          rgba(255, 255, 255, 1) 100%);
+      animation: AnimateBG 20s ease infinite;
+      text-align: left;
+      font-family: sans-serif, Microsoft YaHei, Cambria, Verdana, "Georgia", Arial;
+    }
+
+    @keyframes AnimateBG {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #fff;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    p {
+      color: #fcfcfc;
+      font-size: 18px;
+      text-shadow: 1px 1px 2px #212121;
+    }
+    
+a {
+
+background-color: #000000;
+
+padding: 20px;
+
+display: inline-block;
+
+width: 400px;
+
+height: 500px;
+
+color: Black;
+
+border: solid 2px;
+
+border-radius: 30px;
+
+margin: 0 auto;
+
+position: relative;
+
+ z-index: 2;
+
+top: 50%;
+left: 50%;
+
+transform: translateX(-50%);
+
+animation: slide 5s infinite;
+
+}
+
+
+@keyframes slide {
+  0% {
+    border: solid 2px white;
+  }
+  50% {
+    border: solid 2px black;
+  }
+  100% {
+    border: solid 2px white;
+  }
+}
+a{ background-color: #C1A4A4;
+       padding:20px;
+       display: inline-block;
+       width: 500px;
+       color:Black;
+       border:solid 2px;
+       margin: 0 auto;
+        z-index: 1;
+       }
+        b{ background-color:grey;
+       padding:20px;
+       display: inline-block;
+       width: 150px;
+       color:Black;
+       border:solid 2px;
+     
+       }
+        a2 {
+  background-color: #000000;
+  padding: 0px;
+  display: inline-block;
+  width: 9000px;
+  color: Black;
+  border: solid 2px;
+  margin: 0 auto;
+  position: fixed;
+   z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slide 5s infinite;
+}
+          img {
+ z-index: 3
+ margin-right: 50;
+}
+</style>
+</head>
+
+<body>
+  <center>
+  <a2> 
+
+<center>
+ <img  src="/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/SC-HEADER.png" height= "142.4" width="1615" >
+
+
+</center>
+  </a2>
+<a>
+
+
+<center>
+<h1>Pick Your Pick!</h1>
+<br><br>
+<c>
+<img  src="/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/Pick.png" height= "300" width="300" >
+   
+      
+      <br>
+      
+      
+  
+      <br>
+
+
+<button class="glow-on-hover" onmouseover="document.getElementById('price').innerHTML = '$25'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onclick="window.location.href = '/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/Index.html'">Small</button>
+
+
+<button class="glow-on-hover" onmouseover="document.getElementById('price').innerHTML = '$30'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onclick="window.location.href = '/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/Index.html'">Medium</button>
+
+
+<button class="glow-on-hover" onmouseover="document.getElementById('price').innerHTML = '$35'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onclick="window.location.href = '/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/Index.html'">Large</button>
+
+
+
+
+<style> #price {
+  font-family: Comfortaa, sans-serif;
+  font-size: 50pt;
+    position: absolute;
+  top: 0;
+  right: .5;
+}
+  </style>
+
+ <p id="price" ></p>
+           <p id="price2"></p>
+                <p id="price3"></p>
+      
+
+<br><br><br>
+
+
+</center>
+</a>
+
+
+</center>
+</body>
+
+</html>

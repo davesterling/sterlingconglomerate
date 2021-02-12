@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Sign-In Example</title>
+    <meta charset="utf-8" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <h1>5</h1>
+    <div id="g_id_onload"
+      data-client_id="335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com"
+      data-context="signin"
+      data-ux_mode="popup"
+      data-login_uri=""
+      data-auto_select="true"
+      data-itp_support="true">
+    </div>
+    
+    <div class="g_id_signin"
+      data-type="standard"
+      data-shape="pill"
+      data-theme="outline"
+      data-text="signin"
+      data-size="large"
+      data-logo_alignment="left">
+    </div>
+
+    <script>
+      var input;
+
+      function OneTapSignIn(response) {
+        if (response.error) {
+          console.error('One Tap Sign-In Error:', response.error);
+        } else if (response.credential) {
+          const idToken = response.credential;
+          console.log('User signed in. ID Token:', idToken);
+
+          // Access the user data
+          const userData = response.user;
+          console.log('User Data:', userData);
+
+          // Assign the user data to the 'input' variable
+          input = userData;
+          console.log('Input:', input);
+        }
+      }
+
+      google.accounts.id.initialize({
+  callback: OneTapSignIn
+});
+
+const idToken = 'your-id-token';
+const userData = { name: 'John Doe', age: 25 };
+
+    </script>
+  </body>
+</html>

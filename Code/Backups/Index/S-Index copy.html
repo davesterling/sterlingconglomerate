@@ -1,0 +1,879 @@
+  
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sterling Conglomerate</title>
+  <meta name="robots" content="noarchive" />
+  <meta name="Baiduspider" content="noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <style>
+ 
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #000;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: ;
+    border-radius: 10px;
+}
+div:after {
+    display: block;
+    position:absolute;
+
+    content:" ";
+
+    width: 0;
+    height: 100%;
+
+    border-right: 3px solid lime;
+    top: 0;
+    right:-3px;
+}
+    body,
+    html {
+      margin: 0;
+      padding: 30;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      background-size: 300% 300%;
+      background-image: linear-gradient(-45deg,
+        rgba(93, 63, 211, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(9, 121, 105, 1) 51%,
+          rgba(102, 173, 31, 1) 100%);/*255*/
+       /* rgba(59, 173, 227, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(9, 121, 105,1) 51%,
+          rgb(102, 173, 31) 100%)*/
+      animation: AnimateBG 20s ease infinite;
+      text-align: center;
+      font-family: sans-serif, "Microsoft YaHei", Cambria, Verdana, Georgia, Arial;
+    }
+    b{ background-color:black;
+       padding:20px;
+       display: inline-block;
+       width:30px;
+       color:Black;
+       border:solid 2px;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @keyframes AnimateBG {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #fff;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    p {
+      color: #fcfcfc;
+      font-size: 18px;
+      text-shadow: 1px 1px 2px #212121;
+    }
+    
+.prod-info-main {
+ 
+    border: 1px solid #CEEFFF;
+ 
+    margin-bottom: 20px;
+ 
+    margin-top: 10px;
+ 
+    background: #fff;
+ 
+    padding: 6px;
+ 
+    -webkit-box-shadow: 0 1px 4px 0 rgba(21,180,255,0.5);
+ 
+    box-shadow: 0 1px 1px 0 rgba(21,180,255,0.5);
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-image {
+ 
+    background-color: #EBF8FE;
+ 
+    display: block;
+ 
+    min-height: 238px;
+ 
+    overflow: hidden;
+ 
+    position: relative;
+ 
+    border: 1px solid #CEEFFF;
+ 
+    padding-top: 40px;
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil {
+ 
+    border-bottom: 1px solid #dfe5e9;
+ 
+    padding-bottom: 17px;
+ 
+    padding-left: 16px;
+ 
+    padding-top: 16px;
+ 
+    position: relative;
+ 
+    background: #fff
+ 
+}
+ 
+ 
+ 
+.product-content .product-deatil h5 a {
+ 
+    color: #2f383d;
+ 
+    font-size: 15px;
+ 
+    line-height: 19px;
+ 
+    text-decoration: none;
+ 
+    padding-left: 0;
+ 
+    margin-left: 0
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil h5 a span {
+ 
+    color: #9aa7af;
+ 
+    display: block;
+ 
+    font-size: 13px
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil span.tag1 {
+ 
+    border-radius: 50%;
+ 
+    color: #fff;
+ 
+    font-size: 15px;
+ 
+    height: 50px;
+ 
+    padding: 13px 0;
+ 
+    position: absolute;
+ 
+    right: 10px;
+ 
+    text-align: center;
+ 
+    top: 10px;
+ 
+    width: 50px
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil span.sale {
+ 
+    background-color: #21c2f8
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil span.discount {
+ 
+    background-color: #71e134
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-deatil span.hot {
+ 
+    background-color: #fa9442
+ 
+}
+ 
+ 
+ 
+.prod-info-main .description {
+ 
+    font-size: 12.5px;
+ 
+    line-height: 20px;
+ 
+    padding: 10px 14px 16px 19px;
+ 
+    background: #fff
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-info {
+ 
+    padding: 11px 19px 10px 20px
+ 
+}
+ 
+ 
+ 
+.prod-info-main .product-info a.add-to-cart {
+ 
+    color: #2f383d;
+ 
+    font-size: 13px;
+ 
+    padding-left: 16px
+ 
+}
+ 
+ 
+ 
+.prod-info-main name.a {
+ 
+    padding: 5px 10px;
+ 
+    margin-left: 16px
+ 
+}
+ 
+ 
+ 
+.product-info.smart-form .btn {
+ 
+    padding: 6px 12px;
+ 
+    margin-left: 12px;
+ 
+    margin-top: -10px
+ 
+}
+ 
+ 
+ 
+.load-more-btn {
+ 
+    background-color: #21c2f8;
+ 
+    border-bottom: 2px solid #037ca5;
+ 
+    border-radius: 2px;
+ 
+    border-top: 2px solid #0cf;
+ 
+    margin-top: 20px;
+ 
+    padding: 9px 0;
+ 
+    width: 100%
+ 
+}
+ 
+ 
+ 
+.product-block .product-deatil p.price-container span,
+ 
+.prod-info-main .product-deatil p.price-container span,
+ 
+.shipping table tbody tr td p.price-container span,
+ 
+.shopping-items table tbody tr td p.price-container span {
+ 
+    color: #21c2f8;
+ 
+    font-family: Lato, sans-serif;
+ 
+    font-size: 24px;
+ 
+    line-height: 20px
+ 
+}
+ 
+ 
+ 
+.product-info.smart-form .rating label {
+ 
+    margin-top:15px;
+ 
+ 
+ 
+}
+ 
+ 
+ 
+.prod-wrap .product-image span.tag2 {
+ 
+    position: absolute;
+ 
+    top: 10px;
+ 
+    right: 10px;
+ 
+    width: 36px;
+ 
+    height: 36px;
+ 
+    border-radius: 50%;
+ 
+    padding: 10px 0;
+ 
+    color: #fff;
+ 
+    font-size: 11px;
+ 
+    text-align: center
+ 
+}
+ 
+ 
+ 
+.prod-wrap .product-image span.tag3 {
+ 
+    position: absolute;
+ 
+    top: 10px;
+ 
+    right: 20px;
+ 
+    width: 60px;
+ 
+    height: 36px;
+ 
+    border-radius: 50%;
+ 
+    padding: 10px 0;
+ 
+    color: #fff;
+ 
+    font-size: 11px;
+ 
+    text-align: center
+ 
+}
+ 
+ 
+ 
+.prod-wrap .product-image span.sale {
+ 
+    background-color: #57889c;
+ 
+}
+ 
+ 
+ 
+.prod-wrap .product-image span.hot {
+ 
+    background-color: #a90329;
+ 
+}
+ 
+ 
+ 
+.prod-wrap .product-image span.special {
+ 
+    background-color: #3B6764;
+ 
+}
+ 
+.shop-btn {
+ 
+    position: relative
+ 
+}
+ 
+ 
+ 
+.shop-btn>span {
+ 
+    background: #a90329;
+ 
+    display: inline-block;
+ 
+    font-size: 10px;
+ 
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+ 
+    font-weight: 700;
+ 
+    border-radius: 50%;
+ 
+    padding: 2px 4px 3px!important;
+ 
+    text-align: center;
+ 
+    line-height: normal;
+ 
+    width: 19px;
+ 
+    top: -7px;
+ 
+    left: -7px
+ 
+}
+ 
+ 
+ 
+.product-deatil hr {
+ 
+    padding: 0 0 5px!important
+ 
+}
+ 
+ 
+ 
+.product-deatil .glyphicon {
+ 
+    color: #3276b1
+ 
+}
+ 
+ 
+ 
+.product-deatil .product-image {
+ 
+    border-right: 0px solid #fff !important
+ 
+}
+ 
+ 
+ 
+.product-deatil .name {
+ 
+    margin-top: 0;
+ 
+    margin-bottom: 0
+ 
+}
+ 
+ 
+ 
+.product-deatil .name small {
+ 
+    display: block
+ 
+}
+ 
+ 
+ 
+.product-deatil .name a {
+ 
+    margin-left: 0
+ 
+}
+ 
+ 
+ 
+.product-deatil .price-container {
+ 
+    font-size: 24px;
+ 
+    margin: 0;
+ 
+    font-weight: 300;
+ 
+ 
+ 
+}
+ 
+ 
+ 
+.product-deatil .price-container small {
+ 
+    font-size: 12px;
+ 
+ 
+ 
+}
+ 
+ 
+ 
+.product-deatil .fa-2x {
+ 
+    font-size: 16px!important
+ 
+}
+ 
+ 
+ 
+.product-deatil .fa-2x>h5 {
+ 
+    font-size: 12px;
+ 
+    margin: 0
+ 
+}
+ 
+ 
+ 
+.product-deatil .fa-2x+a,
+ 
+.product-deatil .fa-2x+a+a {
+ 
+    font-size: 13px
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified {
+ 
+    margin-top: 10px
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul {
+ 
+    padding-left: 0
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li:not(first-child) {
+ 
+    margin-left: -3px
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li {
+ 
+    display: inline-block;
+ 
+    background-color: #f9f9f9;
+ 
+    padding: 13px 19px
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li:first-child {
+ 
+    border-right: none
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li a {
+ 
+    text-align: left;
+ 
+    font-size: 12px;
+ 
+    color: #6d7a83;
+ 
+    line-height: 16px;
+ 
+    text-decoration: none
+ 
+}
+ 
+ 
+ 
+.product-deatil .certified ul li a span {
+ 
+    display: block;
+ 
+    color: #21c2f8;
+ 
+    font-size: 13px;
+ 
+    font-weight: 700;
+ 
+    text-align: center
+ 
+}
+ 
+ 
+ 
+.product-deatil .message-text {
+ 
+    width: calc(100% - 70px)
+ 
+}
+ 
+ 
+ 
+@media only screen and (min-width:1024px) {
+ 
+    .prod-info-main div[class*=col-md-4] {
+ 
+        padding-right: 0
+ 
+    }
+ 
+    .prod-info-main div[class*=col-md-8] {
+ 
+        padding: 0 13px 0 0
+ 
+    }
+ 
+    .prod-wrap div[class*=col-md-5] {
+ 
+        padding-right: 0
+ 
+    }
+ 
+    .prod-wrap div[class*=col-md-7] {
+ 
+        padding: 0 13px 0 0
+ 
+    }
+ 
+    .prod-info-main .product-image {
+ 
+        border-right: 1px solid #dfe5e9
+ 
+    }
+ 
+    .prod-info-main .product-info {
+ 
+        position: relative
+ 
+    }
+ 
+}
+
+ 
+The Markup for Bootstrap product listings:
+
+<div class="container">
+<div class="col-xs-12 col-md-6">
+ 
+                <!-- First product box start here-->
+                <div class="prod-info-main prod-wrap clearfix">
+ 
+                      <div class="row">
+ 
+                           <div class="col-md-5 col-sm-12 col-xs-12">
+ 
+                            <div class="product-image">
+ 
+                             <img src="images/products/p4.png" class="img-responsive">
+ 
+                               <span class="tag2 hot">
+ 
+                                 SPECIAL
+ 
+                               </span>
+ 
+                       </div>
+ 
+                  </div>
+ 
+     <div class="col-md-7 col-sm-12 col-xs-12">
+ 
+                  <div class="product-deatil">
+ 
+                               <h5 class="name">
+ 
+                               <a href="#">
+ 
+                                Product Code/Name here
+ 
+                               </a>
+ 
+                               <a href="#">
+ 
+                               <span>Product Category</span>
+ 
+                               </a>                           
+ 
+                        </h5>
+ 
+                            <p class="price-container">
+ 
+                             <span>$199</span>
+ 
+                           </p>
+ 
+              <span class="tag1"></span>
+ 
+   </div>
+ 
+   <div class="description">
+ 
+      <p>A Short product description here </p>
+ 
+   </div>
+ 
+      <div class="product-info smart-form">
+ 
+         <div class="row">
+ 
+         <div class="col-md-12">
+ 
+          <a href="#" class="btn btn-danger">Add to cart</a>
+ 
+             <a href="javascript:void(0);" class="btn btn-info">More info</a>
+ 
+       </div>
+ 
+      <div class="col-md-12">
+ 
+         <div class="rating">Rating:
+ 
+          <label for="stars-rating-5"><i class="fa fa-star text-danger"></i></label>
+ 
+          <label for="stars-rating-4"><i class="fa fa-star text-danger"></i></label>
+ 
+          <label for="stars-rating-3"><i class="fa fa-star text-danger"></i></label>
+ 
+          <label for="stars-rating-2"><i class="fa fa-star text-warning"></i></label>
+ 
+          <label for="stars-rating-1"><i class="fa fa-star text-warning"></i></label>
+ 
+         </div>
+ 
+       </div>
+ 
+    </div>
+ 
+   </div>
+ 
+  </div>
+ 
+  </div>
+ </div>
+ 
+ <!-- end product -->
+ 
+</div>
+</div> 
+    
+
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #000;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: ;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    
+
+    
+  </style>
+</head>
+
+<body>
+  <h1>Sterling Conglomerate</h1>
+     <p><span>More than anything, we strive to maintain our Sterling reputation.
+     Customer satisfaction and timely project completion are vital aspects of our virtue of perfection and honorable business practices.</span></p>
+<break>
+  
+  <button href="/Users/dave/Documents/HTML/Sterling Conglomerate/S-Contact.html" class="glow-on-hover" type="button">PROFESSIONAL PRODUCT DESIGN </button>
+
+<break>
+  
+    <button class="glow-on-hover" type="button">BUILDING INFORMATION MODELING</button>
+    
+<break>
+    
+        <button class="glow-on-hover" type="button">WEB DESIGN</button>
+    
+  
+  
+  
+</body>
+
+</html>

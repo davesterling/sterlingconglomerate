@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local RW</title>
+    <meta charset="utf-8" />
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapi.load('client', initializeGapiClient)"></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="google.accounts.id.initialize({ client_id: CLIENT_ID, callback: gisLoaded })"></script>
+   
+  </head>
+  <body>
+  <script>
+  // Load the Google Sign-In API
+function loadGoogleSignInAPI() {
+  gapi.load('auth2', function() {
+    gapi.auth2.init({
+      client_id: '335082268909-9t8amvamue32ialqgje8nn80pdt1k4k3.apps.googleusercontent.com',
+    });
+  });
+}
+
+// Sign in the user with Google
+function signInWithGoogle() {
+  gapi.auth2.getAuthInstance().signIn().then(function(googleUser) {
+    // Get the user's ID token
+    var idToken = googleUser.getAuthResponse().id_token;
+    
+    // Check if the file exists
+    checkFileExists(idToken)
+      .then(function(exists) {
+        if (exists) {
+          // Read the data from the file and populate the site
+          readFileData(idToken)
+            .then(function(data) {
+              populateDataToSite(data);
+            })
+            .catch(function(error) {
+              console.log('Error reading file data:', error);
+            });
+        } else {
+          // Create a new file for the user
+          createFile(idToken)
+            .then(function() {
+              console.log('New file created for user:', idToken);
+            })
+            .catch(function(error) {
+              console.log('Error creating file:', error);
+            });
+        }
+      })
+      .catch(function(error) {
+        console.log('Error checking file existence:', error);
+      });
+  });
+}
+
+// Check if the file exists
+function checkFileExists(filename) {
+  return new Promise(function(resolve, reject) {
+    // Make an AJAX request to check file existence
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          resolve(true);
+        } else {
+          resolve(false);
+        }
+      }
+    };
+    xhr.open('HEAD', filename + '.txt', true);
+    xhr.send();
+  });
+}
+
+// Read the file data
+function readFileData(filename) {
+  return new Promise(function(resolve, reject) {
+    // Make an AJAX request to read the file data
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          resolve(xhr.responseText);
+        } else {
+          reject(xhr.statusText);
+        }
+      }
+    };
+    xhr.open('GET', filename + '.txt', true);
+    xhr.send();
+  });
+}
+
+// Create a new file
+function createFile(filename) {
+  return new Promise(function(resolve, reject) {
+    // Make an AJAX request to create a new file
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          resolve();
+        } else {
+          reject(xhr.statusText);
+        }
+      }
+    };
+    xhr.open('PUT', filename + '.txt', true);
+    xhr.send();
+  });
+}
+
+// Populate the data to the site
+function populateDataToSite(data) {
+  // Code to populate the data to the site goes here
+  console.log('Data:', data);
+}
+
+// Load the Google Sign-In API on page load
+document.addEventListener('DOMContentLoaded', function() {
+  loadGoogleSignInAPI();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<header>
+    <!-- header content here -->
+    <style>header {
+        position: relative;
+        /* set the height of the header */
+        height: 100px;
+      }
+      
+      .tab-container {
+        /* set the height of the tab container to be the remaining height of the viewport */
+        height: calc(100vh - 100px);
+        /* make the tab container a flexbox to allow for the tabs and content to be laid out side-by-side */
+        display: flex;
+        /* center the content horizontally and vertically */
+        justify-content: center;
+        align-items: center;
+        /* add a padding to the content to ensure it doesn't overlap with the tabs */
+        padding-bottom: 50px;
+        /* make the container overflow horizontally so that it can scroll sideways */
+        overflow-x: auto;
+      }
+      
+      .tabs {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        /* make the tabs a flexbox to lay them out side-by-side */
+        display: flex;
+      }
+      
+      .tabs ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        /* add a border to the tabs for visual separation */
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+      }
+      
+      .tabs li {
+        /* make the tabs inline-blocks */
+        display: inline-block;
+      }
+      
+      .tabs a {
+        display: block;
+        /* add padding to the tabs for visual separation */
+        padding: 10px 20px;
+        /* change the cursor to a pointer on hover to indicate the tabs are clickable */
+        cursor: pointer;
+      }
+      
+      .tabs a:hover {
+        background-color: #eee;
+      }
+      
+      .tab-content {
+        /* make the content a flexbox so that it can be laid out side-by-side with the tabs */
+        display: flex;
+        /* set the height of the content to be the same as the tab container */
+        height: 100%;
+      }
+      
+      .tab-content section {
+        /* set the width of each section to be the same as the tab container */
+        width: 100%;
+        /* add padding to each section for visual separation */
+        padding: 20px;
+      }
+      </style>
+  </header>
+  
+  <div class="tab-container">
+    <nav class="tabs">
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#marketing">Marketing</a></li>
+        <li><a href="#ideas">Ideas</a></li>
+        <li><a href="#contracts">Contracts</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="tab-content">
+      <section id="products">
+        <!-- products content here -->
+        <h1>Tab 1</h1>
+      </section>
+      <section id="marketing">
+        <!-- marketing content here -->
+        <h1>Tab 1</h1>
+      </section>
+      <section id="ideas">
+        <!-- ideas content here -->
+        <h1>Tab 1</h1>
+      </section>
+      <section id="contracts">
+        <!-- contracts content here -->
+        <h1>Tab 1</h1>
+      </section>
+      <section id="about">
+        <!-- about content here -->
+        <h1>Tab 1</h1>
+      </section>
+    </div>
+  </div>
+  

@@ -1,0 +1,142 @@
+Useful Conventions.
+
+Units of measurement
+
+	1	Pixels (px) - a fixed unit of measurement that represents a single dot on a screen.
+	2	Percentage (%) - a unit of measurement relative to the size of the parent container.
+	3	Viewport Width (vw) - a unit of measurement relative to the width of the viewport.
+	4	Viewport Height (vh) - a unit of measurement relative to the height of the viewport.
+	5	em - a unit of measurement relative to the font size of the element.
+
+CSS Button
+
+<button id="diagonal-button" class="diagonal-button">Click me!</button>
+
+
+
+
+a {
+background-color: #000000;
+padding: 0px;
+display: inline-block;
+width: 9000px;
+color: Black;
+border-bottom: solid 2px;
+margin: 0;
+position: fixed;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+animation: slide 5s infinite;
+}
+
+@keyframes slide {
+0% {
+border-bottom: solid 2px white;
+}
+50% {
+border-bottom: solid 2px black;
+}
+100% {
+border-bottom: solid 2px white;
+}
+}
+ a2 {
+background-color: #000000;
+padding: 0px;
+display: inline-block;
+width: 9000px;
+color: Black;
+border: solid 2px;
+margin: 0 auto;
+position: fixed;
+z-index: 2;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+animation: slide 5s infinite;
+}
+      img {
+z-index: 3
+
+}
+
+
+
+Server Info
+
+Linux sterlingconglomerate.com 6.1.23-36.46.amzn2023.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Apr 10 22:43:13 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+Amazon Linux release 2023 (Amazon Linux)
+NAME="Amazon Linux"
+VERSION="2023"
+ID="amzn"
+ID_LIKE="fedora"
+VERSION_ID="2023"
+PLATFORM_ID="platform:al2023"
+PRETTY_NAME="Amazon Linux 2023"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2023"
+HOME_URL="https://aws.amazon.com/linux/"
+BUG_REPORT_URL="https://github.com/amazonlinux/amazon-linux-2023"
+SUPPORT_END="2028-03-01"
+Amazon Linux release 2023 (Amazon Linux)
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/sterlingconglomerate.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/sterlingconglomerate.com/privkey.pem
+
+Server Code
+
+ ssh -i /Users/dave/Desktop/keypair.pem 
+
+
+sterlingconglomerate.com
+
+scp /etc/letsencrypt/live/sterlingconglomerate.com/fullchain.pem ec2-user@54.205.22.29
+
+
+ssh -i /Users/Dave/desktop/keypair.pem ec2-user@54.205.22.29
+
+sudo systemctl restart httpd
+
+sudo nano /etc/httpd/conf/httpd.conf
+
+sudo certbot certonly --webroot
+
+sudo yum remove mod_ssl
+sudo yum install mod_ssl
+
+C:\Users\YourUsername\AppData\Roaming\letsencrypt\live\sterlingconglomerate
+<VirtualHost *:80>
+    ServerName sterlingconglomerate.com
+    ServerAlias www.sterlingconglomerate.com
+    Redirect permanent https://sterlingconglomerate.com
+
+</VirtualHost>
+
+<VirtualHost *:443>
+    ServerName sterlingconglomerate.com
+    ServerAlias www.sterlingconglomerate.com
+    DocumentRoot /var/www/html
+
+    SSLEngine on
+    SSLCertificateFile /etc/pki/tls/certs/myserver.crt
+    SSLCertificateKeyFile /etc/pki/tls/private/myserver.key
+
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</VirtualHost>
+
+(Flush DNS cache) 
+sudo systemctl restart systemd-resolved.service
+
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/sterlingconglomerate.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/sterlingconglomerate.com/privkey.pem
+
+
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/sterlingconglomerate.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/sterlingconglomerate.com/privkey.pem

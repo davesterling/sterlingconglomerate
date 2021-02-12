@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Sign-In Example</title>
+    <meta charset="utf-8" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  </head>
+  <body>
+    <h1>Hi</h1>
+    <div id="google-signin-button"></div>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        gapi.load('auth2', function() {
+  gapi.auth2.init({
+    client_id: '335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com',
+  });
+});
+
+      function onSignIn(googleUser) {
+        // Get the user's basic profile information
+        const profile = googleUser.getBasicProfile();
+
+        // Log the user information to the console
+        console.log('ID: ' + profile.getId());
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail());
+      }
+
+      function renderGoogleSignInButton() {
+        if (typeof google !== 'undefined') {
+          google.accounts.id.initialize({
+            client_id: '335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com',
+            callback: onSignIn,
+          });
+          google.accounts.id.renderButton(
+            document.getElementById('google-signin-button'),
+            {
+              theme: 'filled_blue',
+              size: 'large',
+              text: 'Sign in with Google',
+            }
+          );
+        } else {
+          setTimeout(renderGoogleSignInButton, 100);
+        }
+      }
+
+      renderGoogleSignInButton();
+    </script>
+  </body>
+</html>
+
+
+
+
+

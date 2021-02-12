@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Sign-In Example</title>
+    <meta charset="utf-8" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapi.load('client', initializeGapiClient)"></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="google.accounts.id.initialize({ client_id: CLIENT_ID, callback: gisLoaded })"></script>
+   
+  </head>
+  <body>
+    <h1>Rpvp</h1>
+    <div id="g_id_onload"
+    data-client_id="335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com"
+    data-context="signin"
+    data-ux_mode="popup"
+    data-login_uri=""
+    data-auto_select="true"
+    data-itp_support="true">
+  </div>
+  
+  <div class="g_id_signin"
+    data-type="standard"
+    data-shape="pill"
+    data-theme="outline"
+    data-text="signin"
+    data-size="large"
+    data-logo_alignment="left">
+  </div>
+
+    <script>
+      var users = []; // Variable to store user data
+
+      function handleSignIn() {
+        google.accounts.id.prompt();
+      }
+
+      function onSignIn(googleUser) {
+        const profile = googleUser.getBasicProfile();
+        var user = {
+          id: profile.getId(),
+          name: profile.getName(),
+          imageUrl: profile.getImageUrl(),
+          email: profile.getEmail()
+        };
+        users.push(user); // Store the user data in the users array
+        console.log('User ID: ' + user.id);
+        console.log('Name: ' + user.name);
+        console.log('Image URL: ' + user.imageUrl);
+        console.log('Email: ' + user.email);
+      }
+
+      function renderGoogleSignInButton() {
+        if (typeof google !== 'undefined') {
+          google.accounts.id.initialize({
+            client_id: '335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com',
+            callback: onSignIn,
+          });
+        } else {
+          setTimeout(renderGoogleSignInButton, 100);
+        }
+      }
+
+      renderGoogleSignInButton();
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+

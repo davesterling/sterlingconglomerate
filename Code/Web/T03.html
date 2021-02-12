@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Sign-In Example</title>
+    <meta charset="utf-8" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="gapi.load('client', initializeGapiClient)"></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="google.accounts.id.initialize({ client_id: CLIENT_ID, callback: gisLoaded })"></script>
+  </head>
+<body>
+    <h1>1</h1>
+    <div id="g_id_onload"
+    data-client_id="335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com"
+    data-context="signin"
+    data-ux_mode="popup"
+    data-login_uri=""
+    data-auto_select="true"
+    data-itp_support="true">
+  </div>
+  
+  <div class="g_id_signin"
+    data-type="standard"
+    data-shape="pill"
+    data-theme="outline"
+    data-text="signin"
+    data-size="large"
+    data-logo_alignment="left">
+  </div>
+
+<script>
+  function handleSignIn() {
+    google.accounts.id.prompt();
+  }
+
+</script>    
+</body>
+</html>

@@ -1,0 +1,374 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sterling Conglomerate</title>
+  <meta name="robots" content="noarchive" />
+  <meta name="Baiduspider" content="noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      background-size: 300% 300%;
+      background-image: linear-gradient(-45deg,
+        rgba(93, 63, 211, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(9, 121, 105, 1) 51%,
+          rgba(102, 173, 31, 1) 100%);/*255*/
+       /* rgba(59, 173, 227, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(9, 121, 105,1) 51%,
+          rgb(102, 173, 31) 100%)*/
+      animation: AnimateBG 20s ease infinite;
+      text-align: center;
+      font-family: sans-serif, "Microsoft YaHei", Cambria, Verdana, Georgia, Arial;
+    }
+
+    @keyframes AnimateBG {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #fff;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    p {
+      color: #fcfcfc;
+      font-size: 18px;
+      text-shadow: 1px 1px 2px #212121;
+    }
+    
+    
+    
+
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: ;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    \\\\\
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+     td,table{border: solid 3px black;
+ background-color: pink;
+ }
+  a{ background-color: #C1A4A4;
+       padding:20px;
+       display: inline-block;
+       width: 500px;
+       color:Black;
+       border:solid 2px;
+       margin: 0 auto; 
+       }
+        b{ background-color:grey;
+       padding:20px;
+       display: inline-block;
+       width: 150px;
+       color:Black;
+       border:solid 2px;
+     
+       }
+        td,table{border: solid 3px black;
+ background-color: pink;
+ }
+  a{ background-color: #C1A4A4;
+       padding:20px;
+       display: inline-block;
+       width: 500px;
+       color:Black;
+       border:solid 2px;
+       margin: 0 auto; 
+       }
+        b{ background-color:grey;
+       padding:20px;
+       display: inline-block;
+       width: 150px;
+       color:Black;
+       border:solid 2px;
+
+@keyframes slide-around-border {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  10% {
+    left: 0;
+    top: 100%;
+  }
+  20% {
+    left: 100%;
+    top: 100%;
+  }
+  30% {
+    left: 100%;
+    top: 0;
+  }
+  40% {
+    left: 0;
+    top: 0;
+  }
+  50% {
+    left: 0;
+    top: 100%;
+  }
+  60% {
+    left: 100%;
+    top: 100%;
+  }
+  70% {
+    left: 100%;
+    top: 0;
+  }
+  80% {
+    left: 0;
+    top: 0;
+  }
+  90% {
+    left: 0;
+    top: 100%;
+  }
+  100% {
+    left: 100%;
+    top: 0;
+  }
+}
+.dot {
+  position: relative;
+  width: 10px;
+  height: 10px
+      
+
+  </style>
+</head>
+
+<body>
+ <br>
+ <br>
+ <br>
+ <br> 
+ <br>
+ <br>
+ <br>
+ <br>
+ <left>
+<strong>
+  <h1>Contact Us</h1>
+</strong>
+<br>
+ <br>
+ <br>
+<a>
+ 
+ 
+
+ 
+
+ 
+  <div class="container">
+   <div class="contact-parent">
+      <div class="contact-child child1">
+        
+      </div>
+      <div class="contact-child child2">
+         <div class="inside-contact">
+            <h2>Submit Inquiry</h2>
+            <h3>
+               <span id="confirm">
+            </h3>
+            <form action="" method="post">
+            <p>Name *</p>
+            <input id="txt_name" type="text" Required="required">
+            <p>Email *</p>
+            <input id="txt_email" type="text" Required="required">
+            <p>Phone *</p>
+            <input id="txt_phone" type="text" Required="required">
+            <p>Company *</p>
+            <input id="txt_subject" type="text" Required="required">
+            <p>Message *</p>
+            <textarea id="txt_message" rows="4" cols="20" Required="required" ></textarea>
+            <br>
+            <input type="submit" id="btn_send" value="SEND">
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+  </a>
+</center>
+<script>
+ 
+import java.sql.*;
+
+public class TextBoxToDatabase {
+  public static void main(String[] args) {
+    // Replace with your database url, username, and password
+    String dbUrl = "jdbc:mysql://localhost:3306/mydatabase";
+    String dbUsername = "username";
+    String dbPassword = "password";
+
+    // Get the value of the text box from the website
+    String textBoxValue = "txt_name";
+
+    // Connect to the database
+    Connection conn = null;
+    try {
+      conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
+
+      // Insert the text box value into the database
+      String query = "INSERT INTO text_box_values (value) VALUES (?)";
+      PreparedStatement statement = conn.prepareStatement(query);
+      statement.setString(1, textBoxValue);
+      statement.executeUpdate();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      // Close the connection
+      if (conn != null) {
+        try {
+          conn.close();
+        } catch (SQLException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+  }
+}
+</script>
+
+<div class="text-box" style="position:fixed; left: 0; border: 2px solid black; background-color: purple;">
+  <span class="text-box-text"><strong>Address</strong><br><br>PO Box 681, <br> 8942 N SENECA ST <br> Weedsport, <br>NY 13166-9998<br><br><strong>Email</strong><br><br>SterlingConglomerate@Gmail.com<br><br><strong>Phone</strong><br><br>(315)572-8143</span>
+  <span class="support-tag">Contact</span>
+<br>
+
+
+
+</div>
+</div>
+<style>
+.text-box {
+  display: inline-block;
+  position: relative;
+  padding: 40px;
+}
+
+.text-box-text {
+ display: none; 
+}
+
+.support-tag {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.text-box:hover .text-box-text {
+ display: block; 
+}
+
+
+</style>
+    <br>
+    <br>
+    <br>
+           <button class="glow-on-hover" type="button" style="margin-right: 80px;" onclick="window.location.href='/Users/dave/Desktop/!Sterling/HTML/Sterling Conglomerate/IndexCopy.html'">GuitarHub</button>
+    </td>
+  </tr>
+</table>
+           <button class="glow-on-hover" type="button" style="margin-right: 0px;" onclick="window.location.href='/Users/dave/Desktop/!Sterling/HTML/Sterling Conglomerate/IndexCopy.html'">GuitarHub</button>
+ 
+
+</body>
+
+
+</html>

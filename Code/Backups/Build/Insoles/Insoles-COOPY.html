@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Insoles</title>
+  <meta name="robots" content="noarchive" />
+  <meta name="Baiduspider" content="noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  <style>
+    
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 120%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    
+}
+
+.glow-on-hover {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    body {
+
+
+
+
+
+      width: 100%;
+      height: 500vh;
+      display: flex;
+      flex-direction: column;
+      align-content: left;
+      justify-content: top;
+      background-size: 300% 300%;
+      background-image: linear-gradient(-45deg,
+          /*rgba(59, 173, 227, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(152, 68, 183, 1) 51%,
+          rgba(255, 53, 127, 1) 100%);
+          rgba(50, 999, 50, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(50, 68, 183, 1) 51%,
+          rgba(255, 255, 255, 1) 100%);*/
+              rgba(255, 255, 255, 255) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(9, 121, 105, 1) 51%,
+          rgba(102, 173, 31, 1) 100%);
+      animation: AnimateBG 20s ease infinite;
+      text-align: left;
+      font-family: sans-serif, Microsoft YaHei, Cambria, Verdana, "Georgia", Arial;
+    }
+
+    @keyframes AnimateBG {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #fff;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    p {
+      color: #fcfcfc;
+      font-size: 18px;
+      text-shadow: 1px 1px 2px #212121;
+    }
+    
+a {
+
+background-color: #000000;
+
+padding: 20px;
+
+display: inline-block;
+
+width: 400px;
+
+height: 500px;
+
+color: Black;
+
+border: solid 2px;
+
+border-radius: 30px;
+
+margin: 0 auto;
+
+position: absolute;
+
+margin-bottom: 0;
+
+margin-right: 00px;
+
+ z-index: 3;
+
+top: -100%;
+left: -100%;
+
+transform: translateX(-50%);
+
+animation: slide 5s infinite;
+
+}
+
+
+@keyframes slide {
+  0% {
+    border: solid 2px white;
+  }
+  50% {
+    border: solid 2px black;
+  }
+  100% {
+    border: solid 2px white;
+  }
+}
+
+
+
+
+
+    /*PRODUCT BORDER*/
+a{ background-color: #c0c0c0;
+       padding:20px;
+       display: inline-block;
+       width: 400px;
+       color:Black;
+       border:solid 2px;
+        z-index: 1;
+        margin-top: 320px;
+    
+       }
+       
+       
+       
+       
+       
+       
+       
+     /* TOP BORDER*/
+        a2 {
+  background-color: #000000;
+  padding: 0px;
+  display: inline-block;
+  width: 1600px;
+  color: Black;
+  border: solid 2px;
+  margin: 0 auto;
+  position: fixed;
+   z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slide 5s infinite;
+}
+          img {
+ z-index: 3
+ margin-right: 50;
+}
+
+     img2 {
+ z-index: 3
+ margin-top: 500;
+}
+
+
+#shadowBox {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Black w/opacity/see-through */
+    border: 3px solid;
+}
+
+.rainbow {
+    text-align: left;
+    font-size: 32px;
+    font-family: monospace;
+    letter-spacing: 5px;
+    z-index: 2;
+}
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+
+</style>
+<script type="text/javascript">
+    var num1 = 0;
+    var num2 = 0;
+    var num3 = 0;
+    function button1Click(){
+      num1++;
+      document.getElementById("num1Text").innerHTML = num1;
+    }
+    function button2Click(){
+      num2++;
+      document.getElementById("num2Text").innerHTML = num2;
+    }
+    function button3Click(){
+      num3++;
+      document.getElementById("num3Text").innerHTML = num3;
+    }
+    function clearOrder(){
+      num1 = 0;
+      num2 = 0;
+      num3 = 0;
+      document.getElementById("num1Text").innerHTML = num1;
+      document.getElementById("num2Text").innerHTML = num2;
+      document.getElementById("num3Text").innerHTML = num3;
+    }
+    </script>
+
+</head>
+
+<body>
+ 
+ 
+ <div>
+<div style="position:fixed; left:0px; background-size: 300% 300%; height:1200px; width:75px; background-color:#c0c0c0; border:2px solid black;
+background-repeat:repeat; background-position:center; background-attachment:fixed; transition: width 1s;text-align:center; padding-top:20px; "
+     onmouseover="this.style.width='225px';" onmouseout="this.style.width='75px';">
+ <br> <br> <br> <br>  <br> <br> <br>  <br> <br> <br> <br> <br> <br> <br> <br><br> <br> 
+ 
+ 
+ 
+ 
+ 
+ <div style="overflow-x: hidden;"> </div>
+  <p class=" rainbow_text_animated"style=" margin-right: 16px;">Other<br> Products      </p>
+  <br><br> <br> <br> <br> 
+<button
+        style="position: absolute; right: 75px; top: 875px"
+        class="glow-on-hover"
+        type="button" 
+        onclick="window.location.href='/Users/dave/Desktop/!Sterling/HTML/Sterling Conglomerate/S-Contact.html'"
+        >GuitarHub</button>
+
+
+<button class="glow-on-hover" type="button" style="position: absolute; right: 75px; top: 575px;"
+        onclick="window.location.href='/Users/dave/Desktop/!Sterling/HTML/Sterling Conglomerate/S-Contact.html'"
+        >Foot Furnace</button>
+
+
+<button class="glow-on-hover" type="button" style="position: absolute; right: 75px; top: 650px;"
+        onclick="window.location.href='Mac/Users/dave/Desktop/!Sterling/HTML/Sterling Conglomerate/S-Contact.html'"
+        >Frost Buddy</button>
+
+
+<button class="glow-on-hover" type="button" style="position: absolute; right: 75px; top: 725px;"
+        onclick="window.location.href='Mac/Users/dave/Desktop/!Sterling/HTML/Sterling Conglomerate/S-Contact.html'"
+        >Frost Buddy</button>
+
+
+<button class="glow-on-hover" type="button" style="position: absolute; right: 75px; top: 800px;"
+        onclick="window.location.href='Mac/Users/dave/Desktop/!Sterling/HTML/Sterling Conglomerate/S-Contact.html'"
+        >Frost Buddy</button>
+
+
+
+   
+
+
+
+</div>
+
+ 
+ <div style= "position:relative; top:490px; left: 60px; width: 300px; height: 400px;">
+  <video width="750" autoplay loop muted style="border-radius: 20px;">
+    <source src="/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/CNC.mp4" type="video/mp4">
+  </video>
+</div>
+ </div>
+ 
+  <center>
+   
+   
+   
+   
+   
+   
+   
+      
+<div style="position:relative; top: 170px; right: 300px; width: 455px; height: 400px;">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<ul  class=" rainbow_text_animated" style=" font-size: 20pt;  line-height: 30px; text-align: left; margin-top: -90px; margin-right: 50px;" >
+ <br>
+  <li>&#8226; Reflectte 97% of Radiant Heat</li>
+  <br>
+  <li>&#8226; Soft Foam Core</li>
+    <br>
+  <li>&#8226; Lightweight</li>
+   <br>
+   <li>&#8226; Durable</li>
+   <br>
+  <li>&#8226; Fits any size</li>
+   <br>
+   <li>&#8226; Interchangeable</li>
+</ul>
+
+
+</div>
+
+<p class="rainbow rainbow_text_animated" style="position:absolute; top: 90px; left: 475px; font-size: 60pt; font-weight: bold;">BOOT-BLAZER</p>
+<br>
+
+  <center>
+<div style="position:relative; top: 300px; left: 450px; width: 300px; height: 400px; border: 2px solid black;
+background-color: #c0c0c0; border-radius: 20px;">
+	<p style="position:relative; top: 00px; left: 0px; font-size: 30pt; font-weight: bold; text-align:center; background: linear-gradient(#379343, #1f41e0);  text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Size Chart</p>
+	<table style="width: 100%; style=" font-size: 20pt;  line-height: 30px;">
+		<tr>
+			<th>Size</th>
+			<th>Width</th>
+			<th>Length</th>
+		</tr>
+		<tr>
+			<td style="text-align:center;" >S</td>
+			<td style="text-align:center;">8cm</td>
+			<td style="text-align:center;" >20cm</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;" >M</td>
+			<td style="text-align:center;" >10cm</td>
+			<td style="text-align:center;" >25cm</td>
+		</tr>
+  <td style="text-align:center;" >M</td>
+			<td style="text-align:center;" >12cm</td>
+			<td style="text-align:center;" >30cm</td>
+		<tr>
+			<td>
+
+
+   
+
+
+  <a2> 
+
+<center>
+ <img  src="/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/SC-HEADER.png" height= "142.4" width="1615" >
+
+
+</center>
+  </a2>
+<a>
+
+
+<center>
+ <h1 style="background: linear-gradient(#379343, #1f41e0); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Select Size</h1>
+
+
+<img src="/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/bb2.png" style="margin-top:-35px; height:372px; width:325.5px;">
+
+
+
+<button class="glow-on-hover" style="margin-top: -60px;"  onmouseover="document.getElementById('price').innerHTML = '$4.97 <br> <p>Size 7-9</p>'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''"  onclick="document.getElementById('quantitySmall').style.display='block'">Small</button>
+
+
+
+<button class="glow-on-hover " onmouseover="document.getElementById('price').innerHTML = '$4.98 <br> <p>Size 9-11</p>'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onclick="buttonClick()".style.display='block'">Medium</button>
+  <p id="numText">0</p>
+
+<button class="glow-on-hover " onmouseover="document.getElementById('price').innerHTML = '$4.99 <br> <p>Size 11-13</p>'; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onmouseout="document.getElementById('price').innerHTML = ''; 
+document.getElementById('price2').innerHTML = ''; 
+document.getElementById('price3').innerHTML = ''" onclick="document.getElementById('quantityLarge').style.display='block'">Large</button>
+
+
+<div style= "position:absolute; top:490px; left: -250px; ">
+<form name="PrePage" method = "post" action = "https://Simplecheckout.authorize.net/payment/CatalogPayment.aspx" class="glow-on-hover"
+      > <input type = "hidden" name = "LinkId" value ="b9536e77-dfdb-4d67-bb71-f1cf655a300a" /> <input type = "image" src ="//content.authorize.net/images/buy-now-gold.gif" /> </form>
+</div>
+
+
+
+<style> #price {
+  font-family: Comfortaa, sans-serif;
+  font-size: 70pt;
+  
+    position: absolute;
+  top: -100px;
+  right: 550px;
+}
+<style> #price2 {
+  font-family: Comfortaa, sans-serif;
+  font-size: 70pt;
+  
+    position: absolute;
+  top: 100px;
+  right: 550px;
+}
+<style> #price3 {
+  font-family: Comfortaa, sans-serif;
+  font-size: 70pt;
+  
+    position: absolute;
+  top: 300px;
+  right: 550px;
+}
+  </style>
+
+
+ <p id="price" class="rainbow rainbow_text_animated"></p>
+           <p id="price2" class="rainbow rainbow_text_animated"></p>
+                <p id="price3" class="rainbow rainbow_text_animated"></p>
+                
+                
+
+<select id="quantitySmall" style=" display:none; background-color:#c0c0c0; font-family: Comfortaa, sans-serif; font-size: 40pt; position: absolute; top: 475px; left: 75px;">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+</select>
+
+
+<select id="quantityMedium" style=" display:none; background-color:#c0c0c0; font-family: Comfortaa, sans-serif; font-size: 40pt; position: absolute; top: 475px; right: 178px; ">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+</select>
+
+<select id="quantityLarge" style="display:none; background-color: #c0c0c0; font-family: Comfortaa, sans-serif; font-size: 40pt; position: absolute; top: 475px; right: 75px; ">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+</select>
+<br><br><br>  </a>
+<div style="position:absolute; top: 750px; right: 430px; width: 455px; height: 400px;">
+<img   src='/Users/dave/Documents/!Sterling/!HTML/!SC/!Build/cart.png' height= "600" width="600" >
+</div>
+
+</center>
+
+
+
+
+</body>
+
+</html>

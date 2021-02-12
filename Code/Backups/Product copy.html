@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sterling Conglomerate</title>
+  <meta name="robots" content="noarchive" />
+  <meta name="Baiduspider" content="noarchive" />
+  <meta name="googlebot" content="noarchive" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <style>
+    div {
+    width: 100px;
+    height: 200px;
+
+    border-top: 100px solid red;
+
+    position:relative;    
+    background-color: gray;
+}
+
+div:after {
+    display: block;
+    position:absolute;
+
+    content:" ";
+
+    width: 0;
+    height: 100%;
+
+    border: 3px solid purple;
+    top: 0;
+    right:0px;
+}
+    body,
+    html {
+      margin: 0;
+      padding: 30;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      background-size: 300% 300%;
+      background-image: linear-gradient(-45deg,
+        rgba(93, 63, 211, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(9, 121, 105, 1) 51%,
+          rgba(102, 173, 31, 1) 100%);/*255*/
+       /* rgba(59, 173, 227, 1) 0%,
+          rgba(87, 111, 230, 1) 25%,
+          rgba(9, 121, 105,1) 51%,
+          rgb(102, 173, 31) 100%)*/
+      animation: AnimateBG 20s ease infinite;
+      text-align: center;
+      font-family: sans-serif, "Microsoft YaHei", Cambria, Verdana, Georgia, Arial;
+    }
+    b{ background-color:black;
+       padding:20px;
+       display: inline-block;
+       width: span;
+       color:Black;
+       border:solid 2px;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @keyframes AnimateBG {
+      0% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0% 50%
+      }
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #fff;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    p {
+      color: #fcfcfc;
+      font-size: 18px;
+      text-shadow: 1px 1px 2px #212121;
+    }
+    
+    
+    
+
+
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #000;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: ;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+    
+
+    
+  </style>
+</head>
+
+<body>
+  
+ 
+    
+
+	
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+		<p>Please select the size and click "Order" to place your order.</p>
+		<div class="product">
+			<img src="product.jpg" alt="Product Image">
+			<form action="excel.php" method="post">
+				<label for="size">Size:</label>
+				<select name="size">
+					<option value="small">Small</option>
+					<option value="medium">Medium</option>
+					<option value="large">Large</option>
+				</select>
+				<input type="submit" value="Order">
+			</form>
+		</div>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Product Display Page</title>
+		<style>
+			.product {
+				float: left;
+				margin: 1%;
+				width: 32%;
+				height: 300px;
+				text-align: center;
+				border: 1px solid #000;
+			}
+			.product img {
+				width: 200px;
+				height: 300px;
+			}
+			.product form {
+				margin: 0 auto;
+				width: 75%;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Product Display Page</h1>
+		<p>Please select the size and click "Order" to place your order.</p>
+		<div class="product">
+			<img src="product
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+ ```html
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Exercise 2</title>
+    </head>
+    <body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+      <script>
+      let width = 400;
+      let height = 400;
+      
+      class Ball {
+        constructor
+        
+        
+        write an entire html file that has a red block that you can grab with the mouse and drag around the screen
+        
+        
+        {
+          this.x = width/2;
+          this.y = height/2;
+          this.diameter = 20;
+          this.speed = 2;
+          this.xspeed = this.speed;
+          this.yspeed = this.speed;
+        }
+        
+        show() {
+          fill(255, 0, 0);
+          ellipse(this.x, this.y, this.diameter, this.diameter);
+        }
+        
+        move() {
+          this.x += this.speed;
+          this.y += this.yspeed;
+          
+          // Bounce off walls
+          if (this.x > width || this.x < 0) {
+            this.xspeed *= -1;
+          }
+          if (this.y > height || this.y < 0) {
+            this.yspeed *= -1;
+          }
+        }
+      }
+      
+      let ball = new Ball();
+      
+      function setup() {
+        createCanvas(width, height);
+      }
+      
+      function draw
+      

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>USER LOG</title>
+    <meta charset="utf-8" />
+ 
+  </head>
+  <body>
+    <p>LOGGE</p>
+    <div id="g_id_onload"
+    data-client_id="335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com"
+    data-context="signin"
+    data-ux_mode="popup"
+    data-login_uri=""
+    data-auto_select="true"
+    data-itp_support="true">
+  </div>
+  
+  <div class="g_id_signin"
+    data-type="standard"
+    data-shape="pill"
+    data-theme="outline"
+    data-text="signin"
+    data-size="large"
+    data-logo_alignment="left">
+  </div>
+  <script async defer src="https://apis.google.com/js/api.js""></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="google.accounts.id.initialize({ client_id: CLIENT_ID, callback: gisLoaded })"></script>
+
+  <div data-client_id="335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com.apps.googleusercontent.com"></div>
+<div data-callback="handleToken"></div>
+<script>
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: '335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com',
+        callback: handleCredentialResponse
+      });
+      google.accounts.id.prompt();
+    };
+
+  </script>
+  <div id="g_id_onload"
+  data-client_id="335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com"
+  data-context="signup"
+  data-login_uri="https://sterlingconglomerate.com"
+  data-auto_select="true"
+  data-itp_support="true">
+</div>
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+
+    <script type="text/javascript">
+      /* exported gapiLoaded */
+      /* exported gisLoaded */
+      /* exported handleAuthClick */
+      /* exported handleSignoutClick */
+
+      // TODO: Set your client ID and API key from the Developer Console
+      const CLIENT_ID = '335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com';
+      const API_KEY = 'a4c95364a0442f011a8bcb5462f7d1839830e990';
+
+   
+      // Authorization scopes required by the API
+      const SCOPES = 'https://www.googleapis.com/auth/spreadsheets';
+
+      let tokenClient;
+      let gapiInited = false;
+      let gisInited = false;
+
+ 
+      /**
+       * Callback after the API client is loaded. Initializes the API client.
+       */
+   
+
+      /**
+       * Callback after Google Identity Services are loaded.
+       */
+      function gisLoaded() {
+        tokenClient = google.accounts.oauth2.initTokenClient({
+          client_id: CLIENT_ID,
+          scope: SCOPES,
+        });
+   
+      }
+
+      /**
+       * Enables user interaction after all libraries are loaded.
+       */
+  
+
+      /**
+       * Sign in the user upon button click.
+       */
+      function handleAuthClick() {
+        tokenClient.callback = async (resp) => {
+          if (resp.error !== undefined) {
+            throw resp;
+          }
+          await appendUserData();
+        };
+
+        tokenClient.requestAccessToken({ prompt: 'consent' });
+      }
+
+
+      function handleCredentialResponse(response) {
+  // Here we can do whatever process with the response we want
+  // Note that response.credential is a JWT ID token
+  console.log("Encoded JWT ID token: " + response.credential);
+}
+window.onload = function () {
+  google.accounts.id.initialize({
+    client_id: "335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com", // Replace with your Google Client ID
+    callback: handleCredentialResponse // We choose to handle the callback in client side, so we include a reference to a function that will handle the response
+  });
+      /**
+       * Sign out the user upon button click.
+       */
+      function handleSignoutClick() {
+        const token = gapi.auth.getToken();
+        if (token !== null) {
+          google.accounts.oauth2.revoke(token.access_token);
+          gapi.auth2.getAuthInstance().signOut().then(() => {
+            document.getElementById('content').innerText = '';
+            document.getElementById('authorize_button').style.visibility = 'visible';
+            document.getElementById('signout_button').style.visibility = 'hidden';
+          });
+        }
+      }
+
+      /**
+       * Append the signed-in user's information to the Google Spreadsheet.
+       */
+      async function appendUserData() {
+        const spreadsheetId = '1lHKLgpi5QhrkV10XyxqXH2gZ8ovbnFfCFLOktwpQC1s';
+        const range = 'Sheet1';
+
+        const user = gapi.auth2.getAuthInstance().currentUser.get();
+      }
+      }
+      </script>
+  </body>
+  </html>

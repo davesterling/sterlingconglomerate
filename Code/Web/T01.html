@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Input Example</title>
+    <meta charset="utf-8" />
+    <script src="https://apis.google.com/js/api.js"></script>
+  </head>
+  <body>
+    <h1>UHi</h1>
+    <input type="text" id="user-input" />
+    <button onclick="logUserInput()">Log Input</button>
+
+    <script>
+      var input;
+
+      function logUserInput() {
+        input = document.getElementById("user-input").value;
+        console.log("User Input: " + input);
+        addToGoogleSheet(input);
+      }
+
+      function addToGoogleSheet(value) {
+        gapi.load("client:auth2", function() {
+          gapi.client
+            .init({
+              apiKey: "AIzaSyCWa-ZW9I5I19flO9gHZ7GcZZbfMnMiQ6A",
+              clientId: "335082268909-jrmq8d9jsg37qd7t995d67a9l6u1q88e.apps.googleusercontent.com",
+              discoveryDocs: [
+                "https://sheets.googleapis.com/$discovery/rest?version=v4",
+              ],
+              scope: "https://www.googleapis.com/auth/spreadsheets",
+            })
+            .then(function() {
+              gapi.auth2.getAuthInstance().signIn().then(function() {
+                var params = {
+                  spreadsheetId: "1lHKLgpi5QhrkV10XyxqXH2gZ8ovbnFfCFLOktwpQC1s",
+                  range: "Users!A:B",
+                  valueInputOption: "USER_ENTERED",
+                  resource: {
+                    values: [[value]],
+                  },
+                };
+                gapi.client.sheets.spreadsheets.values
+                  .append(params)
+                  .then(function(response) {
+                    console.log("Value added to Google Sheet.");
+                  })
+                  .catch(function(error) {
+                    console.error("Error adding value to Google Sheet:", error);
+                  });
+              });
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Input Example</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>User Input Example</h1>
+    <input type="text" id="user-input" />
+    <button onclick="logUserInput()">Log Input</button>
+
+    <script>
+      var input;
+
+      function logUserInput() {
+        input = document.getElementById("user-input").value;
+        console.log("User Input: " + input);
+      }
+    </script>
+  </body>
+</html>
